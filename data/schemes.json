@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "1",
+    "name": "PM Mudra Yojana",
+    "state": "All India",
+    "maxIncome": 1500000,
+    "studentOnly": false,
+    "benefit": "Loans up to ₹10 Lakhs",
+    "whyEligible": "You are eligible to apply for business loans for non-corporate enterprises.",
+    "documents": [
+      "Aadhar Card",
+      "PAN Card",
+      "Business Proof",
+      "Bank Statement"
+    ],
+    "link": "https://www.mudra.org.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "PAN Card",
+      "Business Proof",
+      "Bank Statement"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "PM SVANidhi",
+    "state": "All India",
+    "maxIncome": 500000,
+    "studentOnly": false,
+    "benefit": "Working capital loan up to ₹10,000",
+    "whyEligible": "Designed to help street vendors and low-income individuals restart their work.",
+    "documents": [
+      "Aadhar Card",
+      "Vending Certificate",
+      "Bank Account Details"
+    ],
+    "link": "https://pmsvanidhi.mohua.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Vending Certificate",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "state": "All India",
+    "maxIncome": 250000,
+    "studentOnly": false,
+    "benefit": "Free LPG connection and first refill",
+    "whyEligible": "Available for BPL families and low-income households.",
+    "documents": [
+      "Aadhar Card",
+      "Ration Card",
+      "Bank Account",
+      "Passport Size Photo"
+    ],
+    "link": "https://www.pmuy.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Ration Card",
+      "Bank Account",
+      "Passport Size Photo"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "National Means-cum-Merit Scholarship (NMMS)",
+    "state": "All India",
+    "maxIncome": 350000,
+    "studentOnly": true,
+    "benefit": "₹12,000 per annum",
+    "whyEligible": "You are a student falling within the eligible income bracket for this national scholarship.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "School ID",
+      "Bank Passbook"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "School ID",
+      "Bank Passbook"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Bihar Post Matric Scholarship",
+    "state": "Bihar",
+    "maxIncome": 300000,
+    "studentOnly": true,
+    "benefit": "Full tuition fee waiver & maintenance allowance",
+    "whyEligible": "As a student from Bihar within the income limit, you qualify for post-matric benefits.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Caste Certificate",
+      "Bonafide Certificate"
+    ],
+    "link": "https://pmsonline.bih.nic.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Caste Certificate",
+      "Bonafide Certificate"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Swami Vivekananda Merit Cum Means Scholarship",
+    "state": "West Bengal",
+    "maxIncome": 250000,
+    "studentOnly": true,
+    "benefit": "₹1,000 to ₹8,000 per month depending on course",
+    "whyEligible": "You are a West Bengal student matching the income and merit criteria.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Mark Sheet",
+      "Admission Receipt"
+    ],
+    "link": "https://svmcm.wbhed.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Mark Sheet",
+      "Admission Receipt"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "UP Scholarship (Post Matric)",
+    "state": "Uttar Pradesh",
+    "maxIncome": 200000,
+    "studentOnly": true,
+    "benefit": "Variable financial assistance based on course fees",
+    "whyEligible": "As a student residing in UP with eligible family income, you can apply.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Domicile Certificate",
+      "Fee Receipt"
+    ],
+    "link": "https://scholarship.up.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Domicile Certificate",
+      "Fee Receipt"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Stand-Up India Scheme",
+    "state": "All India",
+    "maxIncome": 2500000,
+    "studentOnly": false,
+    "benefit": "Bank loans between ₹10 Lakh and ₹1 Crore",
+    "whyEligible": "Aimed at facilitating bank loans for SC/ST or women entrepreneurs.",
+    "documents": [
+      "Aadhar Card",
+      "PAN Card",
+      "Business Plan",
+      "Project Report"
+    ],
+    "link": "https://www.standupmitra.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "PAN Card",
+      "Business Plan",
+      "Project Report"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "PM Kisan Samman Nidhi",
+    "state": "All India",
+    "maxIncome": 800000,
+    "studentOnly": false,
+    "benefit": "₹6,000 per year in 3 equal installments",
+    "whyEligible": "Financial benefit for landholding farmer families.",
+    "documents": [
+      "Aadhar Card",
+      "Land Ownership Papers",
+      "Bank Account Details"
+    ],
+    "link": "https://pmkisan.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Land Ownership Papers",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Central Sector Scheme of Scholarships for College and University Students",
+    "state": "All India",
+    "maxIncome": 450000,
+    "studentOnly": true,
+    "benefit": "₹12,000 per annum at graduation level, ₹20,000 at PG level",
+    "whyEligible": "Available to meritorious college students from low-income families.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "12th Marksheet",
+      "Bank Account Details"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "12th Marksheet",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+    "state": "All India",
+    "maxIncome": 1000000,
+    "studentOnly": false,
+    "benefit": "Free skill training and certification",
+    "whyEligible": "Open to all Indians looking for skill training for better livelihoods.",
+    "documents": [
+      "Aadhar Card",
+      "Bank Account Details",
+      "Passport Size Photo"
+    ],
+    "link": "https://www.pmkvyofficial.org/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Bank Account Details",
+      "Passport Size Photo"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Sukanya Samriddhi Yojana",
+    "state": "All India",
+    "maxIncome": 5000000,
+    "studentOnly": false,
+    "benefit": "High interest rate savings scheme for girl child",
+    "whyEligible": "Eligible for parents/guardians of a girl child below 10 years of age.",
+    "documents": [
+      "Girl Child Birth Certificate",
+      "Parent Aadhar Card",
+      "Address Proof"
+    ],
+    "link": "https://www.indiapost.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Girl Child Birth Certificate",
+      "Parent Aadhar Card",
+      "Address Proof"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+    "state": "All India",
+    "maxIncome": 300000,
+    "studentOnly": false,
+    "benefit": "Health cover of ₹5 Lakhs per family per year",
+    "whyEligible": "Based on SECC 2011 data for poor and vulnerable families.",
+    "documents": [
+      "Aadhar Card",
+      "Ration Card",
+      "PMJAY Card/Letter"
+    ],
+    "link": "https://pmjay.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Ration Card",
+      "PMJAY Card/Letter"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Mukhyamantri Kanya Utthan Yojana",
+    "state": "Bihar",
+    "maxIncome": 500000,
+    "studentOnly": true,
+    "benefit": "Up to ₹50,000 progressively till graduation",
+    "whyEligible": "Financial support for girls from birth to graduation in Bihar.",
+    "documents": [
+      "Aadhar Card",
+      "Bank Passbook",
+      "Domicile Certificate",
+      "Marksheet"
+    ],
+    "link": "https://edudbt.bih.nic.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Bank Passbook",
+      "Domicile Certificate",
+      "Marksheet"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Kanyashree Prakalpa",
+    "state": "West Bengal",
+    "maxIncome": 120000,
+    "studentOnly": true,
+    "benefit": "Annual ₹1,000 and one-time ₹25,000 grant",
+    "whyEligible": "For unmarried girls aged 13-18 years in West Bengal to promote education.",
+    "documents": [
+      "Aadhar Card",
+      "Age Proof",
+      "Unmarried Declaration",
+      "Bank Account Details"
+    ],
+    "link": "https://www.wbkanyashree.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Age Proof",
+      "Unmarried Declaration",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Beti Bachao Beti Padhao",
+    "state": "All India",
+    "maxIncome": 5000000,
+    "studentOnly": false,
+    "benefit": "Awareness, educational support, and welfare for girl child",
+    "whyEligible": "General welfare scheme targeting child sex ratio and girl education.",
+    "documents": [
+      "Aadhar Card",
+      "Birth Certificate"
+    ],
+    "link": "https://wcd.nic.in/bbbp-schemes",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Birth Certificate"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Post-Matric Scholarship for SC Students",
+    "state": "All India",
+    "maxIncome": 250000,
+    "studentOnly": true,
+    "benefit": "Full maintenance allowance and tuition fees",
+    "whyEligible": "For SC students meeting the income criteria for higher education.",
+    "documents": [
+      "Aadhar Card",
+      "Caste Certificate",
+      "Income Certificate",
+      "Fee Receipt"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Caste Certificate",
+      "Income Certificate",
+      "Fee Receipt"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Post-Matric Scholarship for ST Students",
+    "state": "All India",
+    "maxIncome": 250000,
+    "studentOnly": true,
+    "benefit": "Financial assistance for post-matriculation/post-secondary stages",
+    "whyEligible": "For ST students pursuing higher education within the income limit.",
+    "documents": [
+      "Aadhar Card",
+      "ST Caste Certificate",
+      "Income Certificate",
+      "Bank Details"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "ST Caste Certificate",
+      "Income Certificate",
+      "Bank Details"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Prime Minister's Employment Generation Programme (PMEGP)",
+    "state": "All India",
+    "maxIncome": 2000000,
+    "studentOnly": false,
+    "benefit": "Subsidy up to 35% on project cost up to ₹50 Lakhs",
+    "whyEligible": "Credit-linked subsidy program for setting up new micro-enterprises.",
+    "documents": [
+      "Aadhar Card",
+      "Project Report",
+      "Education Qualification Proof",
+      "Caste Certificate (if applicable)"
+    ],
+    "link": "https://www.kviconline.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Project Report",
+      "Education Qualification Proof",
+      "Caste Certificate (if applicable)"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Atal Pension Yojana (APY)",
+    "state": "All India",
+    "maxIncome": 2000000,
+    "studentOnly": false,
+    "benefit": "Guaranteed minimum pension of ₹1,000 to ₹5,000 per month after 60 years",
+    "whyEligible": "Pension scheme open to all bank account holders aged 18-40 years.",
+    "documents": [
+      "Aadhar Card",
+      "Savings Bank Account"
+    ],
+    "link": "https://npscra.nsdl.co.in/scheme-details.php",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Savings Bank Account"
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Bihar Student Credit Card Scheme",
+    "state": "Bihar",
+    "maxIncome": 1000000,
+    "studentOnly": true,
+    "benefit": "Education loan up to ₹4 Lakhs at nominal interest",
+    "whyEligible": "For Bihar students pursuing higher education who need financial assistance.",
+    "documents": [
+      "Aadhar Card",
+      "10th/12th Marksheet",
+      "Admission Letter",
+      "Applicant and Co-applicant PAN"
+    ],
+    "link": "https://www.7nishchay-yuvaupmission.bihar.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "10th/12th Marksheet",
+      "Admission Letter",
+      "Applicant and Co-applicant PAN"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "UP Mukhyamantri Abhyudaya Yojana",
+    "state": "Uttar Pradesh",
+    "maxIncome": 1000000,
+    "studentOnly": true,
+    "benefit": "Free coaching for competitive exams (UPSC, JEE, NEET)",
+    "whyEligible": "For students preparing for competitive exams in UP.",
+    "documents": [
+      "Aadhar Card",
+      "Domicile Certificate",
+      "Marksheets"
+    ],
+    "link": "http://abhyuday.up.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Domicile Certificate",
+      "Marksheets"
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Krishak Bandhu Scheme",
+    "state": "West Bengal",
+    "maxIncome": 1000000,
+    "studentOnly": false,
+    "benefit": "Financial assistance up to ₹10,000 per year and death benefit of ₹2 Lakhs",
+    "whyEligible": "For farmers and sharecroppers in West Bengal.",
+    "documents": [
+      "Voter ID Card",
+      "RoR (Porcha) or Barga Registration",
+      "Bank Account Details"
+    ],
+    "link": "https://krishakbandhu.net/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Voter ID Card",
+      "RoR (Porcha) or Barga Registration",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+    "state": "All India",
+    "maxIncome": 300000,
+    "studentOnly": false,
+    "benefit": "Financial assistance for pucca house construction (₹1.2 - ₹1.3 Lakhs)",
+    "whyEligible": "For rural poor living in kucha houses based on SECC 2011.",
+    "documents": [
+      "Aadhar Card",
+      "Job Card (MGNREGA)",
+      "Bank Account Details",
+      "Swachh Bharat Mission Number"
+    ],
+    "link": "https://pmayg.nic.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Job Card (MGNREGA)",
+      "Bank Account Details",
+      "Swachh Bharat Mission Number"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Pradhan Mantri Awas Yojana - Urban (PMAY-U)",
+    "state": "All India",
+    "maxIncome": 1800000,
+    "studentOnly": false,
+    "benefit": "Interest subsidy on home loans (CLSS) up to ₹2.67 Lakhs",
+    "whyEligible": "For EWS/LIG/MIG segments in urban areas for house construction/purchase.",
+    "documents": [
+      "Aadhar Card",
+      "Income Proof",
+      "Property Documents"
+    ],
+    "link": "https://pmaymis.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Proof",
+      "Property Documents"
+    ]
+  },
+  {
+    "id": "26",
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "state": "All India",
+    "maxIncome": 800000,
+    "studentOnly": false,
+    "benefit": "Cash incentive of ₹5,000 for pregnant and lactating mothers",
+    "whyEligible": "Maternity benefit to partially compensate for wage loss.",
+    "documents": [
+      "Aadhar Card",
+      "MCP Card",
+      "Bank Account Details"
+    ],
+    "link": "https://wcd.nic.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "MCP Card",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "27",
+    "name": "Pradhan Mantri Shram Yogi Maandhan (PM-SYM)",
+    "state": "All India",
+    "maxIncome": 180000,
+    "studentOnly": false,
+    "benefit": "Assured pension of ₹3,000 per month after 60 years",
+    "whyEligible": "For unorganized workers earning less than ₹15,000 per month.",
+    "documents": [
+      "Aadhar Card",
+      "Savings Bank Account / Jan Dhan Account"
+    ],
+    "link": "https://maandhan.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Savings Bank Account / Jan Dhan Account"
+    ]
+  },
+  {
+    "id": "28",
+    "name": "Pragati Scholarship for Girls",
+    "state": "All India",
+    "maxIncome": 800000,
+    "studentOnly": true,
+    "benefit": "₹50,000 per annum for pursuing technical education",
+    "whyEligible": "For girl students admitted to first year of Degree/Diploma in AICTE approved institutions.",
+    "documents": [
+      "Aadhar Card",
+      "Admission Letter",
+      "Income Certificate",
+      "10th/12th Marksheet"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Admission Letter",
+      "Income Certificate",
+      "10th/12th Marksheet"
+    ]
+  },
+  {
+    "id": "29",
+    "name": "Saksham Scholarship Scheme",
+    "state": "All India",
+    "maxIncome": 800000,
+    "studentOnly": true,
+    "benefit": "₹50,000 per annum for specially-abled students",
+    "whyEligible": "For specially-abled students to pursue technical education.",
+    "documents": [
+      "Aadhar Card",
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Letter"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Letter"
+    ]
+  },
+  {
+    "id": "30",
+    "name": "Oasis Scholarship",
+    "state": "West Bengal",
+    "maxIncome": 250000,
+    "studentOnly": true,
+    "benefit": "Financial support for SC/ST/OBC students",
+    "whyEligible": "For SC/ST/OBC students of West Bengal for pre and post-matric studies.",
+    "documents": [
+      "Aadhar Card",
+      "Caste Certificate",
+      "Income Certificate",
+      "Bank Passbook"
+    ],
+    "link": "https://oasis.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Caste Certificate",
+      "Income Certificate",
+      "Bank Passbook"
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)",
+    "state": "All India",
+    "maxIncome": 500000,
+    "studentOnly": false,
+    "benefit": "Free skill training and placement assistance",
+    "whyEligible": "For rural youth aged 15-35 years from poor families.",
+    "documents": [
+      "Aadhar Card",
+      "BPL Card / Income Certificate",
+      "Education Certificates"
+    ],
+    "link": "http://ddugky.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "BPL Card / Income Certificate",
+      "Education Certificates"
+    ]
+  },
+  {
+    "id": "32",
+    "name": "UP Kanya Sumangala Yojana",
+    "state": "Uttar Pradesh",
+    "maxIncome": 300000,
+    "studentOnly": false,
+    "benefit": "Financial assistance of ₹15,000 progressively in 6 stages",
+    "whyEligible": "For families in UP with an annual income below ₹3 Lakhs to support girl child.",
+    "documents": [
+      "Aadhar Card",
+      "Birth Certificate",
+      "Bank Details",
+      "Income Certificate"
+    ],
+    "link": "https://mksy.up.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Birth Certificate",
+      "Bank Details",
+      "Income Certificate"
+    ]
+  },
+  {
+    "id": "33",
+    "name": "Nai Roshni Scheme",
+    "state": "All India",
+    "maxIncome": 500000,
+    "studentOnly": false,
+    "benefit": "Leadership development for minority women",
+    "whyEligible": "To empower and instill confidence among minority women, including their neighbors.",
+    "documents": [
+      "Aadhar Card",
+      "Minority Certificate",
+      "Bank Account Details"
+    ],
+    "link": "http://nairoshni-moma.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Minority Certificate",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "34",
+    "name": "Begum Hazrat Mahal National Scholarship",
+    "state": "All India",
+    "maxIncome": 200000,
+    "studentOnly": true,
+    "benefit": "₹5,000 to ₹6,000 per annum",
+    "whyEligible": "For meritorious girl students belonging to minority communities (Classes 9 to 12).",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Marksheet",
+      "Bank Account Details"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Marksheet",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Pre-Matric Scholarship for Minorities",
+    "state": "All India",
+    "maxIncome": 100000,
+    "studentOnly": true,
+    "benefit": "Admission/Tuition fee waiver and maintenance allowance",
+    "whyEligible": "For minority community students (Classes 1 to 10) from low-income families.",
+    "documents": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Minority Certificate",
+      "Previous Exam Marksheet"
+    ],
+    "link": "https://scholarships.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Income Certificate",
+      "Minority Certificate",
+      "Previous Exam Marksheet"
+    ]
+  },
+  {
+    "id": "36",
+    "name": "Kisan Credit Card (KCC)",
+    "state": "All India",
+    "maxIncome": 5000000,
+    "studentOnly": false,
+    "benefit": "Short-term credit limits for crops and term loans",
+    "whyEligible": "For farmers to meet their agricultural credit requirements.",
+    "documents": [
+      "Aadhar Card",
+      "Land Documents",
+      "Passport Size Photo"
+    ],
+    "link": "https://pmkisan.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Land Documents",
+      "Passport Size Photo"
+    ]
+  },
+  {
+    "id": "37",
+    "name": "National Social Assistance Programme (NSAP)",
+    "state": "All India",
+    "maxIncome": 100000,
+    "studentOnly": false,
+    "benefit": "Old age pension, widow pension, and disability pension",
+    "whyEligible": "For BPL individuals who are elderly, widows, or disabled.",
+    "documents": [
+      "Aadhar Card",
+      "Age/Death/Disability Certificate",
+      "BPL Proof"
+    ],
+    "link": "https://nsap.nic.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Age/Death/Disability Certificate",
+      "BPL Proof"
+    ]
+  },
+  {
+    "id": "38",
+    "name": "Bihar Mukhyamantri Vridhjan Pension Yojana",
+    "state": "Bihar",
+    "maxIncome": 500000,
+    "studentOnly": false,
+    "benefit": "₹400-500 per month pension for elderly",
+    "whyEligible": "Universal pension for anyone over 60 years in Bihar not receiving other govt pension.",
+    "documents": [
+      "Aadhar Card",
+      "Age Proof",
+      "Bank Account Details"
+    ],
+    "link": "https://sspmis.bihar.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Age Proof",
+      "Bank Account Details"
+    ]
+  },
+  {
+    "id": "39",
+    "name": "Rupashree Prakalpa",
+    "state": "West Bengal",
+    "maxIncome": 150000,
+    "studentOnly": false,
+    "benefit": "One-time financial grant of ₹25,000",
+    "whyEligible": "For economically stressed families at the time of their adult daughters' marriages.",
+    "documents": [
+      "Aadhar Card",
+      "Age Proof",
+      "Income Certificate",
+      "Unmarried Declaration"
+    ],
+    "link": "https://wbrupashree.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Age Proof",
+      "Income Certificate",
+      "Unmarried Declaration"
+    ]
+  },
+  {
+    "id": "40",
+    "name": "SMILE (Support for Marginalized Individuals for Livelihood and Enterprise)",
+    "state": "All India",
+    "maxIncome": 250000,
+    "studentOnly": false,
+    "benefit": "Comprehensive welfare and rehabilitation",
+    "whyEligible": "For transgender persons and persons engaged in begging.",
+    "documents": [
+      "Aadhar Card",
+      "Self-Declaration / Relevant Certification"
+    ],
+    "link": "https://socialjustice.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Self-Declaration / Relevant Certification"
+    ]
+  },
+  {
+    "id": "41",
+    "name": "Chief Minister's Self Employment Scheme",
+    "state": "Uttar Pradesh",
+    "maxIncome": 1000000,
+    "studentOnly": false,
+    "benefit": "Margin money subsidy up to 25% of project cost",
+    "whyEligible": "To promote self-employment among educated unemployed youth of UP.",
+    "documents": [
+      "Aadhar Card",
+      "Educational Certificate",
+      "Project Report",
+      "Domicile Certificate"
+    ],
+    "link": "https://diupmsme.upsdc.gov.in/",
+    "formFields": [
+      {
+        "name": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "Aadhaar Number",
+        "type": "number",
+        "required": true
+      },
+      {
+        "name": "Bank Account Number",
+        "type": "number",
+        "required": true
+      }
+    ],
+    "documentsRequired": [
+      "Aadhar Card",
+      "Educational Certificate",
+      "Project Report",
+      "Domicile Certificate"
+    ]
+  }
+]
