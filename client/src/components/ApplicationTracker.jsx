@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Clock, CheckCircle, XCircle } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const ApplicationTracker = () => {
+  const { t } = useLanguage();
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchApps = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/api/applications');
+        const res = await axios.get('http://localhost:8000/api/applications');
         setApplications(res.data);
       } catch (err) {
         console.error("Failed to load applications", err);
@@ -38,13 +40,23 @@ const ApplicationTracker = () => {
     }
   };
 
+  const getStatusLabel = (status) => {
+    const map = {
+      'Approved': t('tracker.approved'),
+      'Pending': t('tracker.pending'),
+      'Rejected': t('tracker.rejected'),
+      'Just Applied': t('tracker.justApplied'),
+    };
+    return map[status] || status;
+  };
+
   return (
     <div className="h-full overflow-y-auto p-4 md:p-6 w-full max-w-4xl mx-auto animate-slide-up">
-      <h2 className="text-2xl font-bold text-white mb-6">My Applications</h2>
-      
+      <h2 className="text-2xl font-bold text-white mb-6">{t('tracker.title')}</h2>
+
       {applications.length === 0 ? (
         <div className="bg-slate-700 rounded-xl p-8 text-center shadow-sm border border-slate-600">
-          <p className="text-slate-300">You have no tracked applications yet.</p>
+          <p className="text-slate-300">{t('tracker.empty')}</p>
         </div>
       ) : (
         <div className="space-y-4">
@@ -53,52 +65,51 @@ const ApplicationTracker = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-600/50 pb-4">
                 <div>
                   <h3 className="text-lg font-bold text-white">{app.schemeName}</h3>
-                  <p className="text-sm text-slate-300 mt-1">Applied on: {app.date}</p>
+                  <p className="text-sm text-slate-300 mt-1">{t('tracker.appliedOn')}: {app.date}</p>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {app.status === 'Pending' && (
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
-                      <Clock size={16} /> Pending
+                      <Clock size={16} /> {t('tracker.pending')}
                     </span>
                   )}
                   {app.status === 'Approved' && (
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                      <CheckCircle size={16} /> Approved
+                      <CheckCircle size={16} /> {t('tracker.approved')}
                     </span>
                   )}
                   {app.status === 'Rejected' && (
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
-                      <XCircle size={16} /> Rejected
+                      <XCircle size={16} /> {t('tracker.rejected')}
                     </span>
                   )}
                   {app.status === 'Just Applied' && (
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-700">
-                      <Clock size={16} /> Just Applied
+                      <Clock size={16} /> {t('tracker.justApplied')}
                     </span>
                   )}
                 </div>
               </div>
-              
+
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-white">Highlights: </span>
+                  <span className="font-semibold text-white">{t('tracker.highlights')}: </span>
                   <span className="text-slate-300">{app.benefit}</span>
                 </div>
-                
+
                 {app.link && app.link !== '#' && (
-                  <a 
-                    href={app.link} 
-                    target="_blank" 
+                  <a
+                    href={app.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 text-sm font-medium underline"
                   >
-                    Visit Official Portal
+                    {t('tracker.visitPortal')}
                   </a>
                 )}
               </div>
             </div>
-
           ))}
         </div>
       )}

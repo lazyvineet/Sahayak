@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { ShieldAlert, ShieldCheck, Search, AlertTriangle } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const trustedDomains = ['.gov.in', '.nic.in'];
 
 const ScamChecker = () => {
+  const { t } = useLanguage();
   const [input, setInput] = useState('');
   const [result, setResult] = useState(null);
 
@@ -12,8 +14,6 @@ const ScamChecker = () => {
     if (!input.trim()) return;
 
     let urlString = input.trim().toLowerCase();
-    
-    // Add protocol if missing so URL parser works
     if (!urlString.startsWith('http://') && !urlString.startsWith('https://')) {
       urlString = 'https://' + urlString;
     }
@@ -21,15 +21,14 @@ const ScamChecker = () => {
     try {
       const url = new URL(urlString);
       const hostname = url.hostname;
-
       const isTrusted = trustedDomains.some(domain => hostname.endsWith(domain));
       
       if (isTrusted) {
-        setResult({ safe: true, message: `The domain "${hostname}" appears to be an official government source. However, always exercise caution.` });
+        setResult({ safe: true, message: `The domain "${hostname}" appears to be an official government source. Always exercise caution.` });
       } else {
         setResult({ safe: false, message: `Warning: This may be a fake scheme. Do not pay money. Official websites usually end in .gov.in or .nic.in.` });
       }
-    } catch (error) {
+    } catch {
       setResult({ safe: false, message: "Invalid URL format. Please enter a valid website address (e.g., pmkisan.gov.in)." });
     }
   };
@@ -40,8 +39,8 @@ const ScamChecker = () => {
         <div className="mx-auto bg-blue-500/20 w-16 h-16 rounded-full flex items-center justify-center mb-4 text-blue-400">
           <ShieldAlert size={32} />
         </div>
-        <h2 className="text-2xl font-bold text-white">Scam Protection Checker</h2>
-        <p className="text-slate-400 mt-2">Verify if a scheme website is officially recognized by the government.</p>
+        <h2 className="text-2xl font-bold text-white">{t('scam.title')}</h2>
+        <p className="text-slate-400 mt-2">{t('scam.subtext')}</p>
       </div>
 
       <div className="bg-slate-700 rounded-2xl shadow-sm border border-slate-600 p-6">
@@ -52,15 +51,15 @@ const ScamChecker = () => {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Enter scheme URL (e.g., pmkisan.gov.in)"
-              className="w-full bg-slate-800 border border-slate-600 text-white placeholder-slate-500 rounded-xl pl-10 pr-4 py-3 focus:bg-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
+              placeholder={t('scam.placeholder')}
+              className="w-full bg-slate-800 border border-slate-600 text-white placeholder-slate-500 rounded-xl pl-10 pr-4 py-3 focus:bg-slate-700 focus:border-blue-500 outline-none transition-all"
             />
           </div>
           <button 
             type="submit"
             className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl transition-colors shrink-0"
           >
-            Check
+            {t('scam.check')}
           </button>
         </form>
 
@@ -75,7 +74,7 @@ const ScamChecker = () => {
             )}
             <div>
               <h4 className={`font-bold ${result.safe ? 'text-green-200' : 'text-red-200'}`}>
-                {result.safe ? 'Looks Safe' : 'Potential Scam Alert'}
+                {result.safe ? t('scam.safe') : t('scam.alert')}
               </h4>
               <p className={`text-sm mt-1 ${result.safe ? 'text-green-300' : 'text-red-300'}`}>
                 {result.message}

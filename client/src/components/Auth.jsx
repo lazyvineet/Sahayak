@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Mail, KeyRound, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+
 
 const Auth = ({ onLogin }) => {
+  const { t } = useLanguage();
   const [showOtp, setShowOtp] = useState(false);
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
@@ -33,7 +36,7 @@ const Auth = ({ onLogin }) => {
     try {
       if (showOtp) {
         // Verify OTP Step
-        const res = await axios.post('http://localhost:3000/api/auth/verify', { email, otp });
+        const res = await axios.post('http://localhost:8000/api/auth/verify', { email, otp });
         if (res.data.success) {
           onLogin(email);
         } else {
@@ -41,7 +44,7 @@ const Auth = ({ onLogin }) => {
         }
       } else {
         // Request OTP Step
-        const res = await axios.post('http://localhost:3000/api/auth/signup', { email });
+        const res = await axios.post('http://localhost:8000/api/auth/signup', { email });
         if (res.data.success) {
           setMessage('OTP Sent to respective E-mail !!!..');
           setShowOtp(true);
@@ -60,7 +63,7 @@ const Auth = ({ onLogin }) => {
 
   return (
     <div className="flex flex-col h-screen bg-slate-900 font-sans items-center justify-center p-6 relative">
-      
+
       {/* Toast Notification */}
       {message && (
         <div className="absolute top-10 right-10 bg-green-500 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-slide-up z-50">
@@ -70,13 +73,11 @@ const Auth = ({ onLogin }) => {
       )}
 
       <div className="w-full max-w-md bg-slate-800 rounded-2xl shadow-xl border border-slate-700 p-8 animate-slide-up">
-        
+
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white tracking-tight mb-2">Sahayak</h1>
           <p className="text-slate-400">
-            {showOtp 
-              ? 'Enter any random 4-digit code' 
-              : 'Enter your email to login or sign up'}
+            {showOtp ? t('auth.enterOtp') : t('auth.welcomeBack')}
           </p>
         </div>
 
@@ -90,7 +91,7 @@ const Auth = ({ onLogin }) => {
         <form onSubmit={handleSubmit} className="space-y-5">
           {!showOtp && (
             <div className="space-y-1">
-              <label className="text-sm font-medium text-slate-300 ml-1">Email Address</label>
+              <label className="text-sm font-medium text-slate-300 ml-1">{t('auth.emailLabel')}</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Mail size={18} className="text-slate-500" />
@@ -109,7 +110,7 @@ const Auth = ({ onLogin }) => {
 
           {showOtp && (
             <div className="space-y-1 animate-slide-up">
-              <label className="text-sm font-medium text-slate-300 ml-1">Enter 4-digit OTP</label>
+              <label className="text-sm font-medium text-slate-300 ml-1">{t('auth.otpLabel')}</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <KeyRound size={18} className="text-slate-500" />

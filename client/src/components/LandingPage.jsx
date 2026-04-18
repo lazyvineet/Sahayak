@@ -13,50 +13,24 @@ import {
   Menu,
   X
 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const { t, language, changeLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const features = [
-    {
-      icon: <Zap className="text-blue-400" size={24} />,
-      title: "AI-based Eligibility Detection",
-      description: "Our smart assistant analyzes your profile to find exactly which schemes you qualify for in seconds."
-    },
-    {
-      icon: <MessageSquare className="text-green-400" size={24} />,
-      title: "Works in Simple Language",
-      description: "No complex jargon. Talk to us in English, Hindi, or Hinglish just like you're chatting with a friend."
-    },
-    {
-      icon: <LifeBuoy className="text-orange-400" size={24} />,
-      title: "Step-by-Step Help",
-      description: "We guide you through the entire process, explaining required documents and application steps clearly."
-    },
-    {
-      icon: <ShieldCheck className="text-purple-400" size={24} />,
-      title: "Verified Govt Sources",
-      description: "We only provide information and links from official .gov.in websites to ensure your safety."
-    }
+    { icon: <Zap className="text-blue-400" size={24} />, title: t('landing.feature1Title'), description: t('landing.feature1Desc') },
+    { icon: <MessageSquare className="text-green-400" size={24} />, title: t('landing.feature2Title'), description: t('landing.feature2Desc') },
+    { icon: <LifeBuoy className="text-orange-400" size={24} />, title: t('landing.feature3Title'), description: t('landing.feature3Desc') },
+    { icon: <ShieldCheck className="text-purple-400" size={24} />, title: t('landing.feature4Title'), description: t('landing.feature4Desc') },
   ];
 
   const steps = [
-    {
-      number: "01",
-      title: "Tell us about yourself",
-      description: "Answer a few simple questions about your income, state, and occupation."
-    },
-    {
-      number: "02",
-      title: "See eligible schemes",
-      description: "Get a curated list of government schemes designed specifically for your profile."
-    },
-    {
-      number: "03",
-      title: "Get expert guidance",
-      description: "Learn how to apply and track your application progress in one single dashboard."
-    }
+    { number: t('landing.step1Number'), title: t('landing.step1Title'), description: t('landing.step1Desc') },
+    { number: t('landing.step2Number'), title: t('landing.step2Title'), description: t('landing.step2Desc') },
+    { number: t('landing.step3Number'), title: t('landing.step3Title'), description: t('landing.step3Desc') },
   ];
 
   return (
@@ -74,14 +48,23 @@ const LandingPage = () => {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#home" className="text-sm font-medium hover:text-blue-400 transition-colors">Home</a>
-              <a href="#features" className="text-sm font-medium hover:text-blue-400 transition-colors">Features</a>
-              <a href="#how-it-works" className="text-sm font-medium hover:text-blue-400 transition-colors">How It Works</a>
+              <a href="#home" className="text-sm font-medium hover:text-blue-400 transition-colors">{t('nav.home')}</a>
+              <a href="#features" className="text-sm font-medium hover:text-blue-400 transition-colors">{t('nav.features')}</a>
+              <a href="#how-it-works" className="text-sm font-medium hover:text-blue-400 transition-colors">{t('nav.howItWorks')}</a>
+              <select
+                value={language}
+                onChange={(e) => changeLanguage(e.target.value)}
+                className="bg-slate-800 border border-slate-700 text-sm rounded-lg px-2 py-1.5 text-white outline-none cursor-pointer hover:bg-slate-700"
+              >
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="hinglish">Hinglish</option>
+              </select>
               <button 
                 onClick={() => navigate('/login')}
                 className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-900/20"
               >
-                Login
+                {t('nav.login')}
               </button>
             </nav>
 
@@ -97,14 +80,14 @@ const LandingPage = () => {
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden bg-slate-800 border-b border-slate-700 p-4 space-y-4 animate-slide-up">
-            <a href="#home" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">Home</a>
-            <a href="#features" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">Features</a>
-            <a href="#how-it-works" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">How It Works</a>
+            <a href="#home" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">{t('nav.home')}</a>
+            <a href="#features" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">{t('nav.features')}</a>
+            <a href="#how-it-works" onClick={() => setIsMenuOpen(false)} className="block text-base font-medium">{t('nav.howItWorks')}</a>
             <button 
               onClick={() => navigate('/login')}
               className="w-full bg-blue-600 text-white font-bold py-3 rounded-xl"
             >
-              Login
+              {t('nav.login')}
             </button>
           </div>
         )}
@@ -113,27 +96,27 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full text-blue-400 text-sm font-bold mb-8 animate-pulse-slow">
-            <Zap size={16} /> Now powered by Advanced AI
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full text-blue-400 text-sm font-bold mb-8">
+            <Zap size={16} /> {t('landing.badge')}
           </div>
           <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-            Find Government Schemes You <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Actually Qualify</span> For
+            {t('landing.headline')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('landing.headlineHighlight')}</span> {t('landing.headlineEnd')}
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            No long forms. No confusion. Just tell us about yourself in simple language, and let our AI assistant do the rest.
+            {t('landing.subtext')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => navigate('/login')}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-xl shadow-blue-600/20"
             >
-              Get Started <ArrowRight size={20} />
+              {t('landing.getStarted')} <ArrowRight size={20} />
             </button>
             <a 
               href="#how-it-works"
               className="bg-slate-800 hover:bg-slate-700 text-white font-bold px-8 py-4 rounded-2xl text-lg flex items-center justify-center gap-2 border border-slate-700 transition-all"
             >
-              Learn More
+              {t('landing.learnMore')}
             </a>
           </div>
           
@@ -163,8 +146,8 @@ const LandingPage = () => {
       {/* Features Section */}
       <section id="features" className="py-24 bg-slate-800/50 border-y border-slate-800 px-4">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Built for Everyone</h2>
-          <p className="text-slate-400">Simplifying the complex world of Indian government benefits.</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">{t('landing.featuresTitle')}</h2>
+          <p className="text-slate-400">{t('landing.featuresSubtext')}</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((f, i) => (
@@ -183,8 +166,8 @@ const LandingPage = () => {
       <section id="how-it-works" className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">How It Works</h2>
-            <p className="text-slate-400">Get matched with your benefits in three easy steps.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">{t('landing.howItWorksTitle')}</h2>
+            <p className="text-slate-400">{t('landing.howItWorksSubtext')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 relative">
@@ -210,22 +193,22 @@ const LandingPage = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10">
             <ShieldCheck size={64} className="mx-auto text-white/90 mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Safe, Secure & Verified</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{t('landing.trustTitle')}</h2>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl flex items-center gap-2">
                 <CheckCircle size={20} />
-                <span className="font-medium">Uses verified .gov.in sources</span>
+                <span className="font-medium">{t('landing.trust1')}</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-2xl flex items-center gap-2">
                 <Users size={20} />
-                <span className="font-medium">Built for students & families</span>
+                <span className="font-medium">{t('landing.trust2')}</span>
               </div>
             </div>
             <button 
               onClick={() => navigate('/login')}
               className="mt-10 bg-white text-blue-600 hover:bg-slate-100 font-bold px-10 py-4 rounded-2xl transition-all hover:scale-105"
             >
-              Start Free Today
+              {t('landing.startFree')}
             </button>
           </div>
         </div>
@@ -239,44 +222,38 @@ const LandingPage = () => {
               <ShieldCheck size={28} className="text-blue-500" />
               <span className="text-2xl font-bold text-white tracking-tight">Sahayak</span>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              Your AI-powered companion for navigating Indian government schemes and benefits.
-            </p>
+            <p className="text-slate-500 text-sm leading-relaxed">{t('landing.footerDesc')}</p>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6">Quick Links</h4>
+            <h4 className="text-white font-bold mb-6">{t('landing.quickLinks')}</h4>
             <ul className="space-y-4 text-slate-500 text-sm">
-              <li><a href="#home" className="hover:text-blue-400">Home</a></li>
-              <li><a href="#features" className="hover:text-blue-400">Features</a></li>
-              <li><a href="#how-it-works" className="hover:text-blue-400">How It Works</a></li>
+              <li><a href="#home" className="hover:text-blue-400">{t('nav.home')}</a></li>
+              <li><a href="#features" className="hover:text-blue-400">{t('nav.features')}</a></li>
+              <li><a href="#how-it-works" className="hover:text-blue-400">{t('nav.howItWorks')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6">Contact Us</h4>
+            <h4 className="text-white font-bold mb-6">{t('landing.contactUs')}</h4>
             <ul className="space-y-4 text-slate-500 text-sm">
-              <li>support@sarkarsaathi.com</li>
-              <li>New Delhi, India</li>
+              <li>{t('landing.contactEmail')}</li>
+              <li>{t('landing.contactCity')}</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-6">Legal</h4>
+            <h4 className="text-white font-bold mb-6">{t('landing.legal')}</h4>
             <ul className="space-y-4 text-slate-500 text-sm">
-              <li><a href="#" className="hover:text-blue-400">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-blue-400">{t('landing.privacyPolicy')}</a></li>
+              <li><a href="#" className="hover:text-blue-400">{t('landing.terms')}</a></li>
             </ul>
           </div>
         </div>
         
         <div className="max-w-7xl mx-auto border-t border-slate-900 pt-10 text-center">
-          <p className="text-slate-600 text-[10px] md:text-xs mb-4">
-            DISCLAIMER: This is an independent assistant tool. It is NOT an official government website and we do not represent any government entity. We provide information based on publicly available government data.
-          </p>
-          <p className="text-slate-700 text-xs">
-            © {new Date().getFullYear()} Sahayak. All rights reserved.
-          </p>
+          <p className="text-slate-600 text-[10px] md:text-xs mb-4">{t('landing.disclaimer')}</p>
+          <p className="text-slate-700 text-xs">© {new Date().getFullYear()} Sahayak. {t('landing.copyright')}</p>
         </div>
       </footer>
     </div>

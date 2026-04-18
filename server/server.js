@@ -398,7 +398,11 @@ app.post('/api/describe', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+app.get("/hello", (req, res) => {
+  res.json({ message: "Hello from server" })
+})
+
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
