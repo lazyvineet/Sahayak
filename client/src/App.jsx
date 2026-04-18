@@ -8,10 +8,12 @@ import LocalHelpers from './components/LocalHelpers';
 import Auth from './components/Auth';
 import FormHelp from './components/FormHelp';
 import LandingPage from './components/LandingPage';
+import { useLanguage } from './context/LanguageContext';
 
-// Main Application Dashboard Component
-const Dashboard = ({ language, setLanguage }) => {
+// Main Application Dashboard
+const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('chat');
+  const { language, changeLanguage, t } = useLanguage();
 
   return (
     <div className="flex flex-col h-screen bg-slate-800 font-sans">
@@ -23,13 +25,13 @@ const Dashboard = ({ language, setLanguage }) => {
           </div>
           <div>
             <h1 className="text-xl font-bold text-white tracking-tight">Sahayak</h1>
-            <p className="text-xs text-slate-400 font-medium italic">Your AI Government Companion</p>
+            <p className="text-xs text-slate-400 font-medium italic">{t('app.tagline')}</p>
           </div>
         </div>
         
         <select 
           value={language} 
-          onChange={(e) => setLanguage(e.target.value)}
+          onChange={(e) => changeLanguage(e.target.value)}
           className="bg-slate-800 border border-slate-700 text-sm rounded-lg px-2 py-1.5 outline-none font-medium text-white cursor-pointer focus:ring-2 focus:ring-blue-500 transition-all hover:bg-slate-700"
         >
           <option value="en">English</option>
@@ -38,7 +40,7 @@ const Dashboard = ({ language, setLanguage }) => {
         </select>
       </header>
 
-      {/* Main Content Area */}
+      {/* Main Content */}
       <main className="flex-1 overflow-hidden relative">
         <div className={activeTab === 'chat' ? 'h-full' : 'hidden h-full'}>
           <ChatInterface language={language} />
@@ -58,59 +60,37 @@ const Dashboard = ({ language, setLanguage }) => {
       </main>
 
       {/* Bottom Navigation */}
-      <nav className="bg-slate-900 border-t border-slate-800 flex justify-around items-center p-2 md:p-4 pb-safe shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] z-20 overflow-x-auto gap-1">
-        <button 
-          onClick={() => setActiveTab('chat')}
-          className={`flex flex-col items-center gap-1 p-2 w-16 md:w-20 rounded-xl transition-all duration-300 ${activeTab === 'chat' ? 'bg-blue-600 text-white shadow-lg scale-110 opacity-100 font-bold' : 'text-slate-500 opacity-60 hover:opacity-100 hover:bg-slate-800'}`}
-        >
-          <MessageSquare size={22} />
-          <span className="text-[10px] md:text-xs font-semibold">Assistant</span>
-        </button>
-        
-        <button 
-          onClick={() => setActiveTab('tracker')}
-          className={`flex flex-col items-center gap-1 p-2 w-16 md:w-20 rounded-xl transition-all duration-300 ${activeTab === 'tracker' ? 'bg-blue-600 text-white shadow-lg scale-110 opacity-100 font-bold' : 'text-slate-500 opacity-60 hover:opacity-100 hover:bg-slate-800'}`}
-        >
-          <ClipboardList size={22} />
-          <span className="text-[10px] md:text-xs font-semibold">Tracker</span>
-        </button>
-        
-        <button 
-          onClick={() => setActiveTab('scam')}
-          className={`flex flex-col items-center gap-1 p-2 w-16 md:w-20 rounded-xl transition-all duration-300 ${activeTab === 'scam' ? 'bg-blue-600 text-white shadow-lg scale-110 opacity-100 font-bold' : 'text-slate-500 opacity-60 hover:opacity-100 hover:bg-slate-800'}`}
-        >
-          <ShieldAlert size={22} />
-          <span className="text-[10px] md:text-xs font-semibold">Scam Check</span>
-        </button>
-
-        <button 
-          onClick={() => setActiveTab('helpers')}
-          className={`flex flex-col items-center gap-1 p-2 w-16 md:w-20 rounded-xl transition-all duration-300 ${activeTab === 'helpers' ? 'bg-blue-600 text-white shadow-lg scale-110 opacity-100 font-bold' : 'text-slate-500 opacity-60 hover:opacity-100 hover:bg-slate-800'}`}
-        >
-          <Users size={22} />
-          <span className="text-[10px] md:text-xs font-semibold">Helpers</span>
-        </button>
-
-        <button 
-          onClick={() => setActiveTab('help')}
-          className={`flex flex-col items-center gap-1 p-2 w-16 md:w-20 rounded-xl transition-all duration-300 ${activeTab === 'help' ? 'bg-blue-600 text-white shadow-lg scale-110 opacity-100 font-bold' : 'text-slate-500 opacity-60 hover:opacity-100 hover:bg-slate-800'}`}
-        >
-          <LifeBuoy size={22} />
-          <span className="text-[10px] md:text-xs font-semibold">Saathi AI</span>
-        </button>
+      <nav className="bg-slate-900 border-t border-slate-800 flex justify-around items-center p-2 md:p-3 pb-safe shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] z-20 overflow-x-auto gap-1">
+        {[
+          { id: 'chat',    icon: <MessageSquare size={20} />, label: t('nav.assistant') },
+          { id: 'tracker', icon: <ClipboardList size={20} />, label: t('nav.tracker') },
+          { id: 'scam',    icon: <ShieldAlert size={20} />,   label: t('nav.scamCheck') },
+          { id: 'helpers', icon: <Users size={20} />,         label: t('nav.helpers') },
+          { id: 'help',    icon: <LifeBuoy size={20} />,      label: t('nav.saathiAI') },
+        ].map(tab => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`flex flex-col items-center gap-1 p-2 min-w-[60px] md:min-w-[72px] rounded-xl transition-all duration-300 ${
+              activeTab === tab.id
+                ? 'bg-blue-600 text-white shadow-lg scale-110 font-bold'
+                : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800'
+            }`}
+          >
+            {tab.icon}
+            <span className="text-[9px] md:text-[11px] font-semibold leading-tight text-center">{tab.label}</span>
+          </button>
+        ))}
       </nav>
     </div>
   );
 };
 
 function App() {
-  const [language, setLanguage] = useState('en');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (email) => {
-    setUserEmail(email);
+  const handleLogin = () => {
     setIsAuthenticated(true);
     navigate('/app');
   };
@@ -118,25 +98,21 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route 
-        path="/login" 
+      <Route
+        path="/login"
         element={
-          isAuthenticated ? (
-            <Navigate to="/app" />
-          ) : (
-            <Auth onLogin={handleLogin} />
-          )
-        } 
+          isAuthenticated
+            ? <Navigate to="/app" />
+            : <Auth onLogin={handleLogin} />
+        }
       />
-      <Route 
-        path="/app" 
+      <Route
+        path="/app"
         element={
-          isAuthenticated ? (
-            <Dashboard language={language} setLanguage={setLanguage} />
-          ) : (
-            <Navigate to="/login" />
-          )
-        } 
+          isAuthenticated
+            ? <Dashboard />
+            : <Navigate to="/login" />
+        }
       />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

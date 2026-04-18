@@ -1,16 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Send, User, LifeBuoy, Mic, MicOff } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const FormHelp = ({ language = 'en' }) => {
-  const welcomeMsgEn = "Hello! I am your Sahayak AI. Keep me open in a side window while you fill out your application on the official portal. What term or step do you need help with?";
-  const welcomeMsgHi = "नमस्ते! मैं आपका सहायक (Sahayak) AI हूँ। आधिकारिक पोर्टल पर अपना आवेदन भरते समय मुझे साइड विंडो में खुला रखें। आपको किस शब्द या चरण में मदद चाहिए?";
-  const welcomeMsgHinglish = "Namaste! Main aapka Sahayak AI hoon. Official portal par form bharte waqt mujhe side window mein khula rakhein. Aapko kis term ya step mein madad chahiye?";
+  const { t } = useLanguage();
 
-  const getWelcomeMsg = () => language === 'hi' ? welcomeMsgHi : language === 'hinglish' ? welcomeMsgHinglish : welcomeMsgEn;
+  const getWelcomeMsg = () => t('formHelp.welcome');
 
   const [messages, setMessages] = useState([
-    { id: 1, sender: 'bot', text: getWelcomeMsg() }
+    { id: 1, sender: 'bot', text: t('formHelp.welcome') }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -24,7 +23,7 @@ const FormHelp = ({ language = 'en' }) => {
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
-      
+
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript;
         setInput(prev => {
@@ -81,8 +80,8 @@ const FormHelp = ({ language = 'en' }) => {
     setIsTyping(true);
 
     try {
-      const res = await axios.post('http://localhost:3000/api/help', { query: userText, language });
-      
+      const res = await axios.post('http://localhost:8000/api/help', { query: userText, language });
+
       setTimeout(() => {
         setIsTyping(false);
         setMessages(prev => [...prev, { id: Date.now(), sender: 'bot', text: res.data.text }]);
@@ -102,8 +101,8 @@ const FormHelp = ({ language = 'en' }) => {
           <LifeBuoy size={20} />
         </div>
         <div>
-          <h2 className="font-bold text-white">{language === 'hi' ? 'सहायक AI' : 'Sahayak AI'}</h2>
-          <p className="text-xs text-slate-400">{language === 'hi' ? 'आधिकारिक फॉर्म भरते समय प्रश्न पूछें' : language === 'hinglish' ? 'Official forms bharte waqt sawaal poochein' : 'Ask questions while filling out official forms'}</p>
+          <h2 className="font-bold text-white">{t('formHelp.title')}</h2>
+          <p className="text-xs text-slate-400">{t('formHelp.subtext')}</p>
         </div>
       </div>
 
@@ -114,18 +113,17 @@ const FormHelp = ({ language = 'en' }) => {
               <div className={`shrink-0 h-8 w-8 rounded-full flex items-center justify-center mt-1 ${msg.sender === 'user' ? 'bg-blue-600 text-white' : 'bg-slate-700 border border-slate-600 text-blue-400'}`}>
                 {msg.sender === 'user' ? <User size={16} /> : <LifeBuoy size={16} />}
               </div>
-              
-              <div className={`px-4 py-3 rounded-2xl shadow-sm text-[15px] leading-relaxed whitespace-pre-wrap ${
-                msg.sender === 'user' 
-                  ? 'bg-blue-600 text-white rounded-tr-sm' 
-                  : 'bg-slate-700 text-white border border-slate-600 rounded-tl-sm'
-              }`}>
+
+              <div className={`px-4 py-3 rounded-2xl shadow-sm text-[15px] leading-relaxed whitespace-pre-wrap ${msg.sender === 'user'
+                ? 'bg-blue-600 text-white rounded-tr-sm'
+                : 'bg-slate-700 text-white border border-slate-600 rounded-tl-sm'
+                }`}>
                 {msg.text}
               </div>
             </div>
           </div>
         ))}
-        
+
         {isTyping && (
           <div className="flex justify-start">
             <div className="flex gap-3 max-w-[75%]">
@@ -156,7 +154,7 @@ const FormHelp = ({ language = 'en' }) => {
                 handleSend(e);
               }
             }}
-            placeholder={language === 'hi' ? "उदाहरण: अधिवास क्या है?" : language === 'hinglish' ? "E.g., Domicile kya hai?" : "E.g., What is Domicile?"}
+            placeholder={t('formHelp.placeholder')}
             disabled={isTyping}
             className="w-full bg-slate-700 text-white placeholder-slate-400 border border-slate-600 rounded-2xl px-4 py-0 focus:bg-slate-600 focus:border-blue-500 outline-none h-[60px] text-[16px] leading-[60px]"
             autoComplete="off"
@@ -164,9 +162,8 @@ const FormHelp = ({ language = 'en' }) => {
           <button
             type="button"
             onClick={toggleListening}
-            className={`rounded-full p-3.5 shadow-sm shrink-0 flex items-center justify-center h-[52px] w-[52px] transition-colors ${
-              isListening ? 'bg-red-500 hover:bg-red-600 text-white animate-pulse' : 'bg-slate-700 hover:bg-slate-600 text-slate-300 border border-slate-600'
-            }`}
+            className={`rounded-full p-3.5 shadow-sm shrink-0 flex items-center justify-center h-[52px] w-[52px] transition-colors ${isListening ? 'bg-red-500 hover:bg-red-600 text-white animate-pulse' : 'bg-slate-700 hover:bg-slate-600 text-slate-300 border border-slate-600'
+              }`}
           >
             {isListening ? <MicOff size={20} /> : <Mic size={20} />}
           </button>
